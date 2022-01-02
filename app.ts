@@ -1,22 +1,10 @@
-type Person = { name: string; age: number };
+let userInput: unknown;
+userInput = 6;
+userInput = 'Max';
 
-const hasibullah: Person = {
-	name: 'Hasibullah',
-	age: 25,
-};
+let mynName: string;
+// mynName = userInput  // !!! Error !!!
 
-console.log(hasibullah);
-
-function add(n1: number, n2: number) {
-	return n1 + n2;
+if (typeof userInput === 'string') {
+	mynName = userInput; // works with if
 }
-
-function printValue(input: any) {
-	console.log(input);
-}
-
-let combinedValues: (a: number, b: number) => number;
-combinedValues = add;
-// combinedValues = printValue;
-
-console.log(add(2, 3));
