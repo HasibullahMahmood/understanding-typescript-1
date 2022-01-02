@@ -1,17 +1,8 @@
-const combine = (input1: number | string, input2: number | string, operationType: 'addition' | 'multiplication') => {
-	let result;
-	if (typeof input1 === 'number' && typeof input2 === 'number') {
-		if (operationType === 'addition') {
-			result = input1 + input2;
-		} else {
-			result = input1 * input2;
-		}
-	} else {
-		result = input1.toString() + input2.toString();
-	}
+type Person = { name: string; age: number };
 
-	return result;
+const hasibullah: Person = {
+	name: 'Hasibullah',
+	age: 25,
 };
 
-console.log(combine(30, 26, 'multiplication'));
-console.log(combine('Max', 'Anna', 'addition'));
+console.log(hasibullah);
