@@ -8,3 +8,9 @@ let mynName: string;
 if (typeof userInput === 'string') {
 	mynName = userInput; // works with if
 }
+
+function generateError(message: string, code: number): never {
+	throw { message, code };
+}
+
+generateError('An error occurred!', 500);
